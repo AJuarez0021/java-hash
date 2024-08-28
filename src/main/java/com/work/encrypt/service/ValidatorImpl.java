@@ -64,7 +64,7 @@ public class ValidatorImpl implements Validator {
             if (file.getSize() == 0L) {
                 throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El archivo esta vacio");
             }
-        } catch (IOException ex) {
+        } catch (IOException ex) {            
             log.error("Error: ", ex);
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Ocurrio un error");
         }
